@@ -18,14 +18,20 @@ tela: Infantil, adolescentes e adultos
  echo("Idade do espectador:" . $idadeDoEspectador . "<br>");
  
 
- if($idadeDoEspectador < 12 ){
-    echo("Filme Infantil");
- } elseif($idadeDoEspectador < 18){
+ if($idadeDoEspectador >= 0 && $idadeDoEspectador <= 12) {
+    echo ("Filme Infantil");
+} elseif($idadeDoEspectador >= 12 && $idadeDoEspectador <= 17){
     echo("Filme para Adolescentes");
- } else {
-    echo(" Filme para Adultos");
- }
+} elseif ($idadeDoEspectador >= 18 && $idadeDoEspectador <= 59){
+    echo ("Adulto");
+}elseif ($idadeDoEspectador >= 60 && $idadeDoEspectador <= 120){
+        echo ("Idoso");
 
+} else{
+    echo("Opção invalida");
+    
+}
+    
 
 ?>
 
